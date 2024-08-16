@@ -30,7 +30,6 @@ if(resultName){
 }
 */
 
-
 /*const isBoolean= true;
 const noBoolean= false;
 
@@ -44,36 +43,26 @@ if(isBoolean &&noBoolean){
 }
 */
 
-alert("Insira dois números para iniciar o cálculo : ")
+alert("Insira dois números para iniciar o cálculo : ");
 
+let firstNumber = prompt("Digite o primeiro número:");
+let secondNumber = prompt(" Digite o segundo número");
 
-let firstNumber = prompt("Digite o primeiro número:")
-let secondNumber = prompt(" Digite o segundo número")
+firstNumber = Number(firstNumber);
+secondNumber = Number(secondNumber);
 
-firstNumber = Number (firstNumber)
-secondNumber = Number(secondNumber)
+const sub = firstNumber - secondNumber;
+const div = firstNumber / secondNumber;
+const multi = firstNumber * secondNumber;
 
+alert("Subtração:" + sub + " =  " + evenOrOdd(sub));
+alert("Multiplicação:" + multi + "= " + evenOrOdd(multi));
+alert("Divisão:" + div + "= " + evenOrOdd(parseInt(div, 10)));
 
-const sub = firstNumber - secondNumber
-const div = firstNumber / secondNumber
-const multi = firstNumber * secondNumber
-
-
-
-alert("Subtração:" + sub + " =  " + parOuImpar(sub))
-alert("Multiplicação:" + multi + "= " + parOuImpar(multi))
-alert("Divisão:" + div + "= " + parOuImpar(parseInt(div, 10)))
-
-
-function parOuImpar(num) {
-    if (num % 2 === 0) {
-        return "é par";
-    } else {
-        return "é impar";
-    }
+function evenOrOdd(num) {
+  if (num % 2 === 0) {
+    return "é par";
+  } else {
+    return "é impar";
+  }
 }
-
-
-
-
-
